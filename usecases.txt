@@ -1,0 +1,28 @@
+```plantuml
+
+left to right direction
+
+actor Admin
+actor Voter
+actor Time
+actor User
+
+User --> (Consulta calendario)
+User --> (Consulta candidatos de un dia)
+User --> (Consulta ranking de un dia actual o anterior)
+User --> (Login)
+User --> (Crea una cuenta)
+User --> (Eliminar cuenta)
+
+Voter --> (Seleccionar candidato del dia en curso)
+Voter --> (Logout)
+Voter --> (Comparte un día del calendario por redes)
+Voter --> (Propone candidato)
+
+Admin --> (Añadir candidado en un día del calendario)
+Admin --> (Eliminar candidato)
+Admin --> (Logout)
+
+Time --> (Deshabilita la votación para el dia anterior)
+Time --> (Habilita la votación para el dia actual)
+```

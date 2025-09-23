@@ -1,0 +1,33 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const { date } = Astro.params;
+---
+
+<Layout title={`Candidates for ${date} - Birthday Battle`}>
+  <main class="container mx-auto p-4">
+    <h1 class="text-2xl font-bold mb-4">Candidates for {date}</h1>
+    <div id="candidates-list" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <!-- Candidates will be populated by JavaScript -->
+    </div>
+    <button id="vote-button" class="bg-green-500 text-white p-2 rounded hover:bg-green-600 mt-4">Vote for Candidate</button>
+    <button id="propose-button" class="bg-purple-500 text-white p-2 rounded hover:bg-purple-600 mt-4">Propose Candidate</button>
+    <button id="share-button" class="bg-blue-500 text-white p-2 rounded hover:bg-blue-600 mt-4">Share this Day</button>
+  </main>
+  <script>
+    // Placeholder for fetching and displaying candidates
+    document.addEventListener('DOMContentLoaded', () => {
+      const candidatesList = document.getElementById('candidates-list');
+      candidatesList.innerHTML = '<p>Loading candidates for ${date}...</p>';
+      // Fetch candidates from API and render
+    });
+    document.getElementById('vote-button').addEventListener('click', () => {
+      alert('Voting functionality to be implemented');
+    });
+    document.getElementById('propose-button').addEventListener('click', () => {
+      alert('Propose candidate functionality to be implemented');
+    });
+    document.getElementById('share-button').addEventListener('click', () => {
+      alert('Share functionality to be implemented');
+    });
+  </script>
+</Layout>

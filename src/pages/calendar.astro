@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Calendar - Birthday Battle">
+  <main class="container mx-auto p-4">
+    <h1 class="text-2xl font-bold mb-4">Calendar</h1>
+    <p>View the voting calendar and select a day to see candidates or rankings.</p>
+    <div id="calendar" class="mt-4">
+      <!-- Calendar will be populated by JavaScript -->
+    </div>
+    <a href="/candidates/today" class="bg-blue-500 text-white p-2 rounded hover:bg-blue-600">View Today's Candidates</a>
+  </main>
+  <script>
+    // Placeholder for calendar rendering logic
+    document.addEventListener('DOMContentLoaded', () => {
+      const calendar = document.getElementById('calendar');
+      calendar.innerHTML = '<p>Interactive calendar placeholder</p>';
+      // Implement calendar logic here (e.g., using a library like FullCalendar)
+    });
+  </script>
+</Layout>
